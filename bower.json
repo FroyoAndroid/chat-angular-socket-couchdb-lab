@@ -1,5 +1,5 @@
 {
-  "name": "application-name",
+  "name": "chat-angular-socket-couchdb-lab",
   "version": "0.0.0",
   "ignore": [
     "**/.*",

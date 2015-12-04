@@ -1,0 +1,141 @@
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font: 14px normal 'proxima-nova', arial, sans-serif;
+  line-height: 1.6;
+}
+
+body {
+  background: #2B1C3D;
+  margin-top: 40px;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrap {
+  background: #fff;
+  border-radius: 4px;
+  margin: 0 auto;
+  overflow: auto;
+  width: 800px;
+}
+
+.users {
+  float: left;
+  padding: 20px;
+  width: 20%;
+}
+
+.user-self {
+  font-weight: bold;
+}
+
+.messages {
+  background: #eee;
+  border-left: 1px solid #ccc;
+  float: left;
+  height: 440px;
+  overflow-y: scroll;
+  padding: 20px;
+  width: 80%;
+}
+
+.message {
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.2), 0 5px 4px -5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-bottom-color: #aaa;
+  margin: 10px 0;
+}
+
+.message-time {
+  float: right;
+  font-size: 11px;
+  color: #999;
+}
+
+.message-user {
+  color: #999;
+  display: block;
+  font-size: 12px;
+}
+
+.message-self {
+  border-right: 10px solid #6d3aac;
+}
+
+.server-message {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+}
+
+.server-message .message-user {
+  display: none;
+}
+
+.server-message .message-text {
+  color: #999;
+  font-size: 12px;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.new-message {
+  background: #e6e6e6;
+  border-top: 1px solid #ccc;
+  box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.9);
+  clear: both;
+  padding: 20px;
+}
+
+.new-message-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  box-shadow: inset 0 2px 5px 0px rgba(0,0,0,0.2);
+  border: 1px solid #bbb;
+}
+
+.new-message-field:focus {
+  box-shadow: none;
+}
+
+.send-message {
+  display: none;
+}
+
+.links {
+  margin: 10px auto 0;
+  width: 800px;
+}
+
+.links li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.links li:first-child {
+  margin-left: 0;
+}
+
+.links a {
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.links a:hover {
+  color: #fff;
+}

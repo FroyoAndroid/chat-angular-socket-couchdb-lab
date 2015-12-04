@@ -1,0 +1,37 @@
+extends layout
+
+block body
+  div(ng-controller='ChatCtrl')
+
+    ul.links
+      li
+        h2
+          a(href='#', ng-click='changeName()') Click to change name
+        h2
+          a(href='/messages', ng-show='showForAdmin') Check messages
+    .wrap
+      ul.users
+        li(ng-repeat="user in users", ng-class='{ "user-self": user == name }') {{ user }}
+
+      ul.messages
+        li(class='message', ng-class='{ "server-message": message.user == "server" }', ng-repeat='message in messages') 
+          span(class='message-time') {{ message.time | date:'shortTime' }}
+          span(class='message-user') {{ message.user }}
+          span(class='message-text') {{ message.text }}
+
+      .new-message
+        textarea(class='new-message-field', placeholder='New message', rows='4', ng-model='message')
+        button(class='send-message', ng-click='sendMessage()') Send Message
+
+
+  script(src='/socket.io/socket.io.js')
+  script(src='bower_components/angular/angular.js')
+  script(src='bower_components/angular-socket-io/socket.js')
+  script(src='bower_components/jquery/jquery.js')
+  script(src='js/app.js')
+  script(src='js/services.js')
+  script(src='js/controllers.js')
+  script(src='js/filters.js')
+  script(src='js/directives.js')
+  <script type="text/javascript" src="//use.typekit.net/vhc8jky.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
